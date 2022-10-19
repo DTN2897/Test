@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #wrapper{
+        height: 100%;
+        width: 100%;
+    }
+</style>
+<script>
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    function setRandomColor() {
+        var color =getRandomColor();
+        document.getElementById("body").style.background = color;
+        document.getElementById("colorcode").innerHTML = color;
+        
+    }
+</script>
+
+<body id="body">
+    <div>
+        <button onclick="setRandomColor()">Ramdom Colors</button>
+        <p id="colorcode"></p>
+    </div>
+
+</body>
+
+</html>
